@@ -1,8 +1,67 @@
 # Omakase Ruby styling for Rails
-inherit_gem: { rubocop-rails-omakase: rubocop.yml }
+# inherit_gem: { rubocop-rails-omakase: rubocop.yml }
 
 # Overwrite or add rules to create your own house style
 #
 # # Use `[a, [b, c]]` not `[ a, [ b, c ] ]`
 # Layout/SpaceInsideArrayLiteralBrackets:
 #   Enabled: false
+
+plugins:
+  - rubocop-performance
+  - rubocop-rails
+  # - rubocop-rspec
+#   - rubocop-rspec_rails
+#
+Bundler:
+  Enabled: true
+Gemspec:
+  Enabled: true
+Layout:
+  Enabled: true
+Lint:
+  Enabled: true
+Metrics:
+  Enabled: true
+Naming:
+  Enabled: true
+Performance:
+  Enabled: true
+  Exclude:
+    - "test/**/*"
+Rails:
+  Enabled: true
+Security:
+  Enabled: true
+Style:
+  Enabled: true
+
+# plugins:
+#   - rubocop-rspec
+#   - rubocop-rspec_rails
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - bin/**/*
+    - config/environments/**
+    - coverage/**/*
+    - db/schema.rb
+    - lib/tasks/*.rake
+    - log/**/*
+    - nginx/**/*
+    - public/**/*
+    - storage/**/*
+    - swagger/**/*
+    - tmp/**/*
+    - vendor/**/*
+    - .git/**/*
+  SuggestExtensions: true
+  TargetRubyVersion: 3.4
+  TargetRailsVersion: 8.1
+
+Bundler/OrderedGems:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
