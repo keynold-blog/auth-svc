@@ -128,6 +128,8 @@ GEM
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
     json (2.16.0)
+    jwt (3.1.2)
+      base64
     kamal (2.8.2)
       activesupport (>= 7.0)
       base64 (~> 0.2)
@@ -310,6 +312,8 @@ GEM
       net-ssh (>= 2.8.0)
       ostruct
     stringio (3.1.8)
+    strong_migrations (2.5.1)
+      activerecord (>= 7.1)
     thor (1.4.0)
     thruster (0.1.16)
     thruster (0.1.16-aarch64-linux)
@@ -351,6 +355,7 @@ DEPENDENCIES
   debug
   dotenv-rails (~> 3.1)
   image_processing (~> 1.2)
+  jwt (~> 3.1)
   kamal
   pg (~> 1.1)
   puma (>= 5.0)
@@ -362,6 +367,7 @@ DEPENDENCIES
   rubocop-rspec_rails (~> 2.32)
   ruby-lsp (~> 0.26.3)
   ruby-lsp-rails (~> 0.4.8)
+  strong_migrations (~> 2.5)
   thruster
   tzinfo-data
 

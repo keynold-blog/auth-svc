@@ -57,3 +57,7 @@ group :development do
   gem 'ruby-lsp-rails', '~> 0.4.8'
   gem 'rubocop-rails', '~> 2.33'
 end
+
+gem "jwt", "~> 3.1"
+
+gem "strong_migrations", "~> 2.5"
