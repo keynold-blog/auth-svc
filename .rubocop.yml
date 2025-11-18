@@ -10,9 +10,9 @@
 plugins:
   - rubocop-performance
   - rubocop-rails
-  # - rubocop-rspec
-#   - rubocop-rspec_rails
-#
+  - rubocop-rspec
+  - rubocop-rspec_rails
+
 Bundler:
   Enabled: true
 Gemspec:

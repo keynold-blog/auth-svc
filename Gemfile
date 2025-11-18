@@ -49,15 +49,16 @@ group :development do
   gem 'annotaterb', '~> 4.20'
   gem 'bullet', '~> 8.1'
   gem 'dotenv-rails', '~> 3.1'
+  gem 'rspec-rails', '~> 8.0'
   gem 'rubocop-performance', '~> 1.26', require: false
+  gem 'rubocop-rails', '~> 2.33'
   gem 'rubocop-rails-omakase', require: false
   gem 'rubocop-rspec', '~> 3.8'
   gem 'rubocop-rspec_rails', '~> 2.32'
   gem 'ruby-lsp', '~> 0.26.3'
   gem 'ruby-lsp-rails', '~> 0.4.8'
-  gem 'rubocop-rails', '~> 2.33'
 end
 
-gem "jwt", "~> 3.1"
+gem 'jwt', '~> 3.1'
 
-gem "strong_migrations", "~> 2.5"
+gem 'strong_migrations', '~> 2.5'
