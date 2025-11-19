@@ -19,6 +19,7 @@
   # https://devenv.sh/processes/
   # processes.dev.exec = "${lib.getExe pkgs.watchexec} -n -- ls -la";
 
+  dotenv.enable = true;
   # https://devenv.sh/services/
   services = {
     postgres = {

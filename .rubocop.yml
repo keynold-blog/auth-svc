@@ -12,6 +12,9 @@ plugins:
   - rubocop-rails
   - rubocop-rspec
   - rubocop-rspec_rails
+  - rubocop-factory_bot
+require:
+  - 'test_prof/rubocop'
 
 Bundler:
   Enabled: true
@@ -35,10 +38,6 @@ Security:
   Enabled: true
 Style:
   Enabled: true
-
-# plugins:
-#   - rubocop-rspec
-#   - rubocop-rspec_rails
 
 AllCops:
   NewCops: enable

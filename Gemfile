@@ -43,22 +43,38 @@ group :development, :test do
 
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
   gem 'brakeman', require: false
+  gem 'test-prof', '~> 1.4'
+  gem 'bullet', '~> 8.1'
+  gem 'factory_bot_rails', '~> 6.5'
+  gem 'ffaker', '~> 2.25'
+  gem 'shoulda-matchers', '~> 7.0'
 end
 
 group :development do
   gem 'annotaterb', '~> 4.20'
-  gem 'bullet', '~> 8.1'
+  gem 'database_consistency', require: false
   gem 'dotenv-rails', '~> 3.1'
+  gem 'isolator', '~> 1.2'
   gem 'rspec-rails', '~> 8.0'
+  gem 'rubocop-factory_bot', '~> 2.28', require: false
   gem 'rubocop-performance', '~> 1.26', require: false
-  gem 'rubocop-rails', '~> 2.33'
+  gem 'rubocop-rails', '~> 2.33', require: false
   gem 'rubocop-rails-omakase', require: false
   gem 'rubocop-rspec', '~> 3.8'
   gem 'rubocop-rspec_rails', '~> 2.32'
-  gem 'ruby-lsp', '~> 0.26.3'
-  gem 'ruby-lsp-rails', '~> 0.4.8'
+  gem 'ruby-lsp', '~> 0.26.3', require: false
+  gem 'ruby-lsp-factory_bot', '~> 0.6.0', require: false
+  gem 'ruby-lsp-rails', '~> 0.4.8', require: false
+  gem 'ruby-lsp-rspec', '~> 0.1.28', require: false
+  gem 'pry-rails', '~> 0.3.11'
 end
 
 gem 'jwt', '~> 3.1'
 
 gem 'strong_migrations', '~> 2.5'
+
+gem 'rswag', '~> 2.17'
+
+gem 'lograge', '~> 0.14.0'
+
+gem 'amazing_print', '~> 2.0'
