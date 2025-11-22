@@ -64,3 +64,16 @@ Bundler/OrderedGems:
 
 Style/Documentation:
   Enabled: false
+
+RSpecRails/InferredSpecType:
+  Enabled: false
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: consistent_comma
+
+Layout/HashAlignment:
+  EnforcedHashRocketStyle: table
+
+Rails/SkipsModelValidations:
+  Exclude:
+    - 'spec/**/*'

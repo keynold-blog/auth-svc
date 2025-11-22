@@ -14,7 +14,7 @@ gem 'puma', '>= 5.0'
 # gem "redis", ">= 4.0.1"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
-# gem "bcrypt", "~> 3.1.7"
+gem 'bcrypt', '~> 3.1.7'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[windows jruby]
@@ -47,7 +47,11 @@ group :development, :test do
   gem 'bullet', '~> 8.1'
   gem 'factory_bot_rails', '~> 6.5'
   gem 'ffaker', '~> 2.25'
-  gem 'shoulda-matchers', '~> 7.0'
+  gem 'pry-rails', '~> 0.3.11'
+end
+
+group :test do
+  gem 'shoulda-matchers', '~> 6.0'
 end
 
 group :development do
@@ -66,7 +70,6 @@ group :development do
   gem 'ruby-lsp-factory_bot', '~> 0.6.0', require: false
   gem 'ruby-lsp-rails', '~> 0.4.8', require: false
   gem 'ruby-lsp-rspec', '~> 0.1.28', require: false
-  gem 'pry-rails', '~> 0.3.11'
 end
 
 gem 'jwt', '~> 3.1'
@@ -78,3 +81,5 @@ gem 'rswag', '~> 2.17'
 gem 'lograge', '~> 0.14.0'
 
 gem 'amazing_print', '~> 2.0'
+
+gem 'data_migrate', '~> 11.3'

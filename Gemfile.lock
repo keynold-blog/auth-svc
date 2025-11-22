@@ -85,6 +85,7 @@ GEM
       ruby-next-core (~> 1.0)
     ast (2.4.3)
     base64 (0.3.0)
+    bcrypt (3.1.20)
     bcrypt_pbkdf (1.1.1)
     bigdecimal (3.3.1)
     bootsnap (1.19.0)
@@ -102,6 +103,9 @@ GEM
     concurrent-ruby (1.3.5)
     connection_pool (2.5.4)
     crass (1.0.6)
+    data_migrate (11.3.1)
+      activerecord (>= 6.1)
+      railties (>= 6.1)
     database_consistency (2.0.8)
       activerecord (>= 3.2)
     date (3.5.0)
@@ -379,8 +383,8 @@ GEM
       ffi (~> 1.12)
       logger
     securerandom (0.4.1)
-    shoulda-matchers (7.0.1)
-      activesupport (>= 7.1)
+    shoulda-matchers (6.5.0)
+      activesupport (>= 5.2.0)
     sniffer (0.5.0)
       anyway_config (>= 1.0)
       dry-initializer (~> 3)
@@ -430,10 +434,12 @@ PLATFORMS
 DEPENDENCIES
   amazing_print (~> 2.0)
   annotaterb (~> 4.20)
+  bcrypt (~> 3.1.7)
   bootsnap
   brakeman
   bullet (~> 8.1)
   bundler-audit
+  data_migrate (~> 11.3)
   database_consistency
   debug
   dotenv-rails (~> 3.1)
@@ -460,7 +466,7 @@ DEPENDENCIES
   ruby-lsp-factory_bot (~> 0.6.0)
   ruby-lsp-rails (~> 0.4.8)
   ruby-lsp-rspec (~> 0.1.28)
-  shoulda-matchers (~> 7.0)
+  shoulda-matchers (~> 6.0)
   strong_migrations (~> 2.5)
   test-prof (~> 1.4)
   thruster
