@@ -48,7 +48,7 @@ group :development, :test do
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
 
-  gem "ruby-lsp", "~> 0.26.3"
+  gem "ruby-lsp", "~> 0.26.4"
 
   gem "ruby-lsp-rails", "~> 0.4.8"
 end
