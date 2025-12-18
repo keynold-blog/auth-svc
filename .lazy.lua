@@ -14,8 +14,14 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
-        rubocop = { mason = false, },
-        ruby_lsp = { mason = false, },
+        rubocop = {
+          enable = true,
+          mason = false,
+        },
+        ruby_lsp = {
+          enable = true,
+          mason = false,
+        },
         codebook = { enabled = false },
         harper_ls = {enabled = false },
       }

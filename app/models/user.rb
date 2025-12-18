@@ -17,9 +17,11 @@
 #  index_users_on_email  (email) UNIQUE
 #
 class User < ApplicationRecord
-  has_secure_password
+  MAX_NAME_LENGTH = 35
 
   attribute :failed_attempts, :integer, default: 0
+
+  has_secure_password
 
   validates :email, presence: true, uniqueness: true
 end
