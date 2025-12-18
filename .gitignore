@@ -7,14 +7,18 @@
 # Ignore bundler config.
 /.bundle
 
-# Ignore all environment files.
+# Ignore all environment files (except templates).
 /.env*
+!/.env*.erb
 
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+
+# Ignore database config.
+/config/database.yml
 
 # Ignore pidfiles, but keep the directory.
 /tmp/pids/*
@@ -27,18 +31,22 @@
 /tmp/storage/*
 !/tmp/storage/
 !/tmp/storage/.keep
+dump.rdb
+.DS_Store
 
-# Ignore key files for decrypting credentials and more.
-/config/*.key
+# Ignore master key for decrypting credentials and more.
+/config/master.key
 
+# Ignore assets.
+/node_modules/
+/app/assets/builds/*
+!/app/assets/builds/.keep
+/public/assets
 
-# Devenv
-.devenv*
-devenv.local.nix
-devenv.local.yaml
+# Ignore test coverage files.
+/coverage
 
-# direnv
-.direnv
-
-# pre-commit
-.pre-commit-config.yaml
+# Ignore elasticbeanstalk files.
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

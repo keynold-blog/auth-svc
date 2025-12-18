@@ -19,6 +19,7 @@
   # https://devenv.sh/processes/
   # processes.dev.exec = "${lib.getExe pkgs.watchexec} -n -- ls -la";
 
+  dotenv.enable = true;
   # https://devenv.sh/services/
   services = {
     postgres = {
@@ -32,20 +33,20 @@
       ];
       initialDatabases = [
         {
-          name = "auth_service_development";
+          name = "auth_svc_development";
         }
         {
-          name = "auth_service_test";
+          name = "auth_svc_test";
         }
       ];
       initialScript = ''
-        CREATE USER auth_service_development WITH PASSWORD 'auth_service_development';
-        ALTER ROLE auth_service_development WITH LOGIN SUPERUSER INHERIT CREATEDB CREATEROLE REPLICATION;
-        GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO auth_service_development;
+        CREATE USER auth_svc_development WITH PASSWORD 'auth_svc_development';
+        ALTER ROLE auth_svc_development WITH LOGIN SUPERUSER INHERIT CREATEDB CREATEROLE REPLICATION;
+        GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO auth_svc_development;
 
-        CREATE USER auth_service_test WITH PASSWORD 'auth_service_test';
-        ALTER ROLE auth_service_development WITH LOGIN SUPERUSER INHERIT CREATEDB CREATEROLE REPLICATION;
-        GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO auth_service_test;
+        CREATE USER auth_svc_test WITH PASSWORD 'auth_svc_test';
+        ALTER ROLE auth_svc_test WITH LOGIN SUPERUSER INHERIT CREATEDB CREATEROLE REPLICATION;
+        GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO auth_svc_test;
       '';
     };
   };
